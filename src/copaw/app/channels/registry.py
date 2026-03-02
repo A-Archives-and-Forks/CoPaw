@@ -15,6 +15,7 @@ from .discord_ import DiscordChannel
 from .feishu import FeishuChannel
 from .imessage import IMessageChannel
 from .qq import QQChannel
+from .telegram import TelegramChannel
 from .voice import VoiceChannel, VOICE_AVAILABLE
 
 if TYPE_CHECKING:
@@ -28,6 +29,7 @@ _BUILTIN: dict[str, type[BaseChannel]] = {
     "dingtalk": DingTalkChannel,
     "feishu": FeishuChannel,
     "qq": QQChannel,
+    "telegram": TelegramChannel,
     "console": ConsoleChannel,
 }
 if VOICE_AVAILABLE and VoiceChannel is not None:

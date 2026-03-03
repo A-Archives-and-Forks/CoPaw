@@ -261,6 +261,17 @@ export function ChannelDrawer({
             </Form.Item>
           )}
 
+          {activeKey !== "console" && (
+            <Form.Item
+              name="filter_tool_messages"
+              label={t("channels.filterToolMessages")}
+              valuePropName="checked"
+              tooltip={t("channels.filterToolMessagesTooltip")}
+            >
+              <Switch />
+            </Form.Item>
+          )}
+
           {renderExtraFields(activeKey)}
 
           <Form.Item>
